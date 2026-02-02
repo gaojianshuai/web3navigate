@@ -1,0 +1,104 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 64 64"
+  role="img"
+  aria-hidden="true"
+>
+  <defs>
+    <!-- Web3 霓虹渐变背景 -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e40ff" />
+      <stop offset="50%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+    <!-- 链环高光 -->
+    <linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f9fafb" />
+      <stop offset="50%" stop-color="#e5e7eb" />
+      <stop offset="100%" stop-color="#a5b4fc" />
+    </linearGradient>
+    <!-- 中心立方体 -->
+    <linearGradient id="cube" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22c55e" />
+      <stop offset="100%" stop-color="#14b8a6" />
+    </linearGradient>
+  </defs>
+
+  <!-- 圆角霓虹背景 -->
+  <rect
+    x="4"
+    y="4"
+    width="56"
+    height="56"
+    rx="18"
+    fill="url(#bg)"
+  />
+  <!-- 外发光 -->
+  <rect
+    x="4"
+    y="4"
+    width="56"
+    height="56"
+    rx="18"
+    fill="none"
+    stroke="#60a5fa"
+    stroke-opacity="0.35"
+    stroke-width="1.6"
+  />
+
+  <!-- 左链环 -->
+  <path
+    fill="none"
+    stroke="url(#ring)"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    d="M20 26c0-3.5 2.8-6.5 6.3-6.5h4.2c3.5 0 6.3 2.9 6.3 6.5 0 3.6-2.8 6.5-6.3 6.5h-3"
+  />
+  <!-- 右链环 -->
+  <path
+    fill="none"
+    stroke="url(#ring)"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    d="M44 38c0 3.5-2.8 6.5-6.3 6.5h-4.2C30 44.5 27.2 41.6 27.2 38c0-3.6 2.8-6.5 6.3-6.5h3"
+  />
+
+  <!-- 中心 Web3 立体方块 -->
+  <g transform="translate(0, 1)">
+    <!-- 顶面 -->
+    <polygon
+      fill="#bbf7d0"
+      fill-opacity="0.95"
+      points="32 16 42 20.5 32 25 22 20.5"
+    />
+    <!-- 左侧面 -->
+    <polygon
+      fill="url(#cube)"
+      points="22 20.5 22 32.5 32 37 32 25"
+    />
+    <!-- 右侧面 -->
+    <polygon
+      fill="#059669"
+      points="32 25 32 37 42 32.5 42 20.5"
+    />
+  </g>
+
+  <!-- 中心发光点，模拟“on-chain” 信号 -->
+  <circle
+    cx="32"
+    cy="32"
+    r="3.4"
+    fill="#f9fafb"
+  />
+  <circle
+    cx="32"
+    cy="32"
+    r="6.4"
+    fill="none"
+    stroke="#a5b4fc"
+    stroke-width="1.2"
+    stroke-opacity="0.7"
+  />
+</svg>
